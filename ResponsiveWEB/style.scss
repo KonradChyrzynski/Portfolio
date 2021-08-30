@@ -17,8 +17,9 @@ body{
     line-height: 1.6;
     margin: 0;
 }
-p{
+p:not(.third--text) {
     margin-bottom: 1em;
+    text-align: center;
 }
 
 h1,h2,h3{
