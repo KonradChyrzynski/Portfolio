@@ -37,8 +37,19 @@ header > p > span:nth-child(2){
 .wrapper-center{
     width: 93%;
 }
+
+//nav
 nav{display: flex;
-justify-content: space-between;}
+justify-content: space-between;
+}
+
+ul{
+    padding:0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+
 .nav-item-left{
     display: flex;
     font-size: 1.2rem;
@@ -55,6 +66,16 @@ justify-content: space-between;}
 .nav-item-left{
     height: 76px;
 }
+.btn-nav-black{
+    background-color: black;
+    color: white;
+    border: 0px;
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+//nav
 
 .mid-media-top{
     display: grid;
@@ -80,4 +101,36 @@ justify-content: space-between;}
 
 .mid-media-top > a:first-child,.mid-media-top > a:nth-child(2),.mid-media-top > a:nth-child(3){
     display: block;
+}
+
+@media(min-width: 600px){
+    .nav-items-right > p{
+        
+    }
+    .hamburger{
+        display: none;
+    }
+    .nav-items-mid{
+        display: flex;
+        justify-content: center;
+
+    }
+    nav > div {
+        flex: 1;
+    }
+
+    .nav-items-right,.nav-items-mid > ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    li{
+        margin: 0 1em 0 1em;
+    }
+    .nav-items-right{
+        justify-content: flex-end;
+    }
+    .nav-items-right > p {
+        margin-right: 1em;
+    }
 }
