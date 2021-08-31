@@ -33,6 +33,10 @@
           justify-content: center;
 }
 
+.bg-top * p:not(.nav-item-left > p, .nav-items-mid * p, .nav-items-right > p) {
+  color: #5a5444;
+}
+
 header {
   text-align: center;
   width: 93%;
@@ -166,6 +170,22 @@ section {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
+}
+
+.check-circle-div {
+  margin: 1em 0 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.check-circle-div > p {
+  margin-left: 1.3em;
+  margin-top: auto;
 }
 
 .mid-media-top {

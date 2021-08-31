@@ -1,5 +1,7 @@
 $gray: #f0eeeb;
 
+$pGray: #5a5444;
+
 *{
     margin: 0;
     padding: 0;
@@ -19,6 +21,9 @@ $gray: #f0eeeb;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.bg-top * p:not(.nav-item-left > p,.nav-items-mid * p,.nav-items-right > p) {
+    color: $pGray;
 }
 
 header{
@@ -126,6 +131,19 @@ section{
 .section-one-div-right{
     order: 0;
 }
+
+.check-circle-div{
+    margin: 1em 0 1em 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.check-circle-div > p {
+    margin-left: 1.3em;
+    margin-top: auto;
+
+}
+
 
 
 //section-1
