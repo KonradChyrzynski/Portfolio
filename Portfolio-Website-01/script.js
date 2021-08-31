@@ -14,3 +14,5 @@ hamburger.addEventListener("click", () => {
     navItemLeft.classList.toggle("spense-margin")
     nav.classList.toggle("nav-small-screan");
 })
+
+

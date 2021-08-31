@@ -8,6 +8,11 @@ $pGray: #5a5444;
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+p{
+    line-height: 1.5;
+}
+
 //header
 .bg-header{
     background-color: black;
@@ -128,6 +133,16 @@ section{
     order: 1;
 }
 
+.section-one-div-left-content > h1 {
+    font-size: 32px;
+    color: #292929;
+}
+
+.section-one-div-left-content{
+    margin-top: 2em;
+}
+
+
 .section-one-div-right{
     order: 0;
 }
@@ -139,9 +154,34 @@ section{
 }
 
 .check-circle-div > p {
-    margin-left: 1.3em;
+    margin-left: 1em;
     margin-top: auto;
+    font-weight: 600;
 
+}
+
+.form-one{
+    display: flex;
+
+    padding: 0 0 2.5em 0;
+}
+
+.form-one > input[type="text"]{
+    color: $pGray;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form-one > input[type="submit"]{
+    margin-left: 1em;
+    background-color: black;
+    color: white;
+    border: 0px;
+    padding: 1.2em 1.8em 1.2em 1.8em;
+    border-radius: 5px;
+    font-weight: 700;
 }
 
 
@@ -195,9 +235,16 @@ section{
         margin: 0 1em 0 1em;
     }
     .nav-items-right{
-        justify-content: flex-end;
+        display: flex;
+        justify-content: space-between;
+        min-width: 170px;
+
     }
     .nav-items-right > p {
         margin-right: 1em;
+    }
+    .btn-nav-black{
+        margin-top: 0;
+        padding: 1.2em 1.5em 1.2em 1.5em;
     }
 }
