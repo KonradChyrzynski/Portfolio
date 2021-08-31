@@ -10,6 +10,11 @@ p {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .bg-header {
   background-color: black;
   color: white;
@@ -39,6 +44,15 @@ p {
 
 .bg-top * p:not(.nav-item-left > p, .nav-items-mid * p, .nav-items-right > p) {
   color: #5a5444;
+}
+
+.bg-mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header {
@@ -236,24 +250,63 @@ section {
       grid-template-rows: 1fr;
   gap: 1em;
   place-items: end;
+  padding: 2em 0 2em 0;
 }
 
 .mid-media-top > a {
   display: none;
 }
 
-.section-one-div-right > img {
-  max-width: 100%;
-  display: block;
-}
-
-.mid-media-top > a > img {
-  max-width: 100%;
-  display: block;
-}
-
 .mid-media-top > a:first-child, .mid-media-top > a:nth-child(2), .mid-media-top > a:nth-child(3) {
   display: block;
+}
+
+.mid-nested-container-section-top {
+  background-color: #f0eeeb;
+  border-radius: 10px;
+}
+
+.mid-nested-container-wrapper > h1 {
+  padding-top: 1.2em;
+  padding-bottom: 0.3em;
+  width: 60%;
+}
+
+.mid-nested-container-wrapper > p {
+  color: #5a5444;
+}
+
+.mid-nested-container-wrapper > p > span {
+  font-weight: 700;
+  -webkit-text-decoration: 1px underline #5a5444;
+          text-decoration: 1px underline #5a5444;
+}
+
+.mid-span-a {
+  margin-top: 1.3em;
+}
+
+.mid-nested-container-section-top-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mid-nested-container-wrapper {
+  width: 80%;
+}
+
+.mid-nested-container-wrapper-img {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 600px) {
