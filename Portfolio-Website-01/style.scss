@@ -15,6 +15,7 @@ $gray: #f0eeeb;
     align-items: center;
 }
 .bg-top{
+    background-color: $gray;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,13 +41,28 @@ header > p > span:nth-child(2){
 
 //nav
 nav{display: flex;
-justify-content: space-between;
+    justify-content: space-between;
+    position: relative;
 }
+//Hamburger
+
+.hamburger{
+    position: absolute;
+    right: 0;
+    top: 1.95em;
+}
+
+//Hamburger
+
 
 ul{
     padding:0px;
     margin: 0px;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 
@@ -54,28 +70,65 @@ ul{
     display: flex;
     font-size: 1.2rem;
     font-weight: 600;
+    height: 76px;
 }
 .nav-item-left > p{
     margin: auto 0;
 }
+.nav-items-right{
+    justify-content: center;
+}
 
 .nav-items-mid,.nav-items-right{
+    flex:1;
     display: none;
 }
 
-.nav-item-left{
-    height: 76px;
-}
+
+
 .btn-nav-black{
     background-color: black;
     color: white;
     border: 0px;
-    padding: 1em;
+    padding: 1.2em 1.8em 1.2em 1.8em;
     border-radius: 5px;
     font-weight: 700;
+    margin-top: 2em;
+}
+
+.nav-open{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spense-margin{
+    margin: 0 auto;
+}
+
+.nav-small-screan{
+    height: 100vh;
+    flex-direction: column;
 }
 
 //nav
+
+//section-1
+
+section{
+    display:flex;
+    flex-direction: column;
+}
+
+.section-one-div-left{
+    order: 1;
+}
+
+.section-one-div-right{
+    order: 0;
+}
+
+
+//section-1
 
 .mid-media-top{
     display: grid;
@@ -104,9 +157,6 @@ ul{
 }
 
 @media(min-width: 600px){
-    .nav-items-right > p{
-        
-    }
     .hamburger{
         display: none;
     }
@@ -120,7 +170,6 @@ ul{
     }
 
     .nav-items-right,.nav-items-mid > ul{
-        display: flex;
         flex-direction: row;
         align-items: center;
     }
