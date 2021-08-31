@@ -302,4 +302,10 @@ section {
     padding: 1.2em 1.5em 1.2em 1.5em;
   }
 }
+
+@media (max-width: 318px) {
+  .form-one > input[type="text"] {
+    width: 50%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
