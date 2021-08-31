@@ -38,6 +38,12 @@ img{
     display: flex;
     justify-content: center;
 }
+.bg-bottom{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
 
 header{
     text-align: center;
@@ -145,6 +151,9 @@ section{
     font-size: 32px;
     color: #292929;
 }
+.section-one-div-left-content > p {
+    padding-top: 0.5em;
+}
 
 .section-one-div-left-content{
     margin-top: 2em;
@@ -167,6 +176,11 @@ section{
     font-weight: 600;
 
 }
+
+.check-circle-div > i {
+    align-self: center;
+}
+
 
 .form-one{
     display: flex;
@@ -195,7 +209,7 @@ section{
 
 
 //section-1
-
+//mid
 .mid-media-top{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -210,6 +224,7 @@ section{
     
 }
 
+
 .mid-media-top > a:first-child,.mid-media-top > a:nth-child(2),.mid-media-top > a:nth-child(3){
     display: block;
 }
@@ -220,6 +235,7 @@ section{
 }
 .mid-nested-container-wrapper > h1{
     padding-top: 1.2em;
+    font-size: 26px;
     padding-bottom: 0.3em;
     width: 60%;
 }
@@ -237,7 +253,7 @@ section{
 }
 
 
-.mid-nested-container-section-top-div{
+.mid-nested-container-section-top-div,.mid-nested-container-section-bottom{
     display: flex;
     justify-content: center;
 }
@@ -249,7 +265,58 @@ section{
     display: flex;
     justify-content: center;
 }
+.mid-nested-container-section-bottom{
+    flex-direction: column;
+}
+.mid-nested-container-section-bottom-right-div{
+    order:0;
+}
+.mid-nested-container-section-bottom-right-div > p{
+    padding-top: 1em;
+    color: $pGray;
+}
 
+.mid-nested-container-section-bottom-right-div > p > span{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.mid-nested-container-section-bottom-left-div{
+    order: 1;
+}
+.mid-nested-container-section-bottom-left-div > img {
+    margin-top: 2em;
+}
+
+.mid-nested-container-section-bottom-right-div > h1{
+    font-size: 26px;
+    padding: 2em 0 0em 0;
+    width: 85%;
+}
+
+//mid
+//footer
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-flex > div {
+    flex: 1;
+}
+
+
+.footer-container > p:first-child{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.footer-container > p {
+    padding: 0.3em 0 0.3em 0;
+}
+
+.footer-container > p:not(.footer-container > p:first-child){
+    color: #9e9e9e;
+}
+//footer
 @media(min-width: 600px){
     .hamburger{
         display: none;
