@@ -230,9 +230,11 @@ section{
     display: block;
 }
 
-.mid-nested-container-section-top{
+.mid-nested-container-top-bg{
     background-color: $gray;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 .mid-nested-container-wrapper > h1{
     padding-top: 1.2em;
@@ -317,6 +319,12 @@ section{
 .footer-container > p:not(.footer-container > p:first-child){
     color: #9e9e9e;
 }
+
+.object_fit{
+    object-fit: cover;
+    object-position: right;
+}
+
 //footer
 @media(min-width: 600px){
     p{
@@ -422,17 +430,20 @@ section{
     }
 }
 @media (min-width: 1200px){
+    .mid-media-top{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .mid-media-top > a {
+        display:block;
+    }
     .mid-nested-container
     {
         flex-direction: column;
     }
-    .mid-nested-container-section-top{
+    .mid-nested-container-section-top,.mid-nested-container-section-bottom{
         display: flex;
         flex-direction: row;
-    }
-    .mid-nested-container-section-bottom{
-        display: flex;
-        justify-content: row;
+        width: 90%;
     }
     section{
         display: flex;
@@ -451,5 +462,18 @@ section{
     }
     .mid-nested-container-section-bottom-left-div{
         order: -1;
+    }
+    .mid-nested-container-bottom-bg{
+        display: flex;
+        justify-content: center;
+    }
+    .mid-nested-container-section-bottom > div{
+        flex: 1;
+    }
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer-flex{
+        margin-left: 2em;
     }
 }
