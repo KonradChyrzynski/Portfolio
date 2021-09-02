@@ -25,7 +25,7 @@ let changeImg = () => {
         phoneImg.src ="Assets/Phone Mockup (Mobile).png"
         phoneImg.className = ""
     }
-        else if($( window ).width() >= 600 && $( window ).width() <= 1200){
+        else if($( window ).width() >= 600 && $( window ).width() <= 1199){
             topImg.src = "Assets/Hero Image (Tablet).png"
             phoneImg.src ="Assets/Phone Mockup (Tablet).png"
 

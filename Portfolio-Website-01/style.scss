@@ -12,6 +12,10 @@ $pGray: #5a5444;
 p{
     line-height: 1.5;
 }
+a{
+    text-decoration: none;
+}
+
 
 img{
     max-width: 100%;
@@ -68,6 +72,12 @@ header > p > span:nth-child(2){
 nav{display: flex;
     justify-content: space-between;
     position: relative;
+}
+nav * a{
+    color: black;
+}
+nav * a:hover{
+    color: $pGray;
 }
 //Hamburger
 
@@ -131,13 +141,13 @@ ul{
 }
 
 .nav-small-screan{
-    height: 70vh;
+    height: 50vh;
     flex-direction: column;
 }
 
 //nav
 
-//section-1
+//section-1-top
 
 section{
     display:flex;
@@ -207,10 +217,10 @@ section{
     font-weight: 700;
 }
 
-//section-1
+//section-1-top
 
 
-//mid
+//mid-mobile
 .mid-media-top{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -254,7 +264,12 @@ section{
 .mid-span-a{
     margin-top: 1.3em;
 }
-
+.mid-nested-container * a {
+    color: $pGray;
+}
+.mid-nested-container * a:hover {
+    color: black;
+}
 
 .mid-nested-container-section-top-div,.mid-nested-container-section-bottom{
     display: flex;
@@ -297,8 +312,10 @@ section{
     width: 85%;
 }
 
-//mid
-//footer
+//mid-mobile
+
+
+//footer-mobile
 .footer-flex{
     display: flex;
     justify-content: space-between;
@@ -316,14 +333,22 @@ section{
     padding: 0.3em 0 0.3em 0;
 }
 
-.footer-container > p:not(.footer-container > p:first-child){
+.footer-container > a:not(.footer-container > p:first-child){
     color: #9e9e9e;
 }
-
-.object_fit{
-    object-fit: cover;
-    object-position: right;
+.footer-container > a:not(.footer-container > p:first-child):hover{
+    color: white;
 }
+.footer-container-1 > a > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+//footer-mobile
+
+
+//fix phone img on desktop
 
 //footer
 @media(min-width: 600px){
@@ -425,11 +450,14 @@ section{
     //footer-tablet
 }
 @media (max-width:318px){
+    //fix input on smaller width
     .form-one > input[type="text"]{
         width: 50%;
     }
 }
 @media (min-width: 1200px){
+
+    //mid-desktop
     .mid-media-top{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
@@ -443,8 +471,45 @@ section{
     .mid-nested-container-section-top,.mid-nested-container-section-bottom{
         display: flex;
         flex-direction: row;
+        min-height: 400px;
         width: 90%;
     }
+    .mid-nested-container-section-top{
+        position: relative;
+    }
+    .mid-nested-container-section-top-right-div{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .mid-nested-container-section-top-right-div{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .mid-nested-container-section-top-right-div > img {
+        width: none;
+    }
+
+    .mid-nested-container-section-bottom > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+    .mid-nested-container-section-bottom-right-div > h1 {
+        font-size: 32px;
+        padding: 0;
+    }
+    .mid-nested-container-section-top-left-div{
+        width: 50%;
+    }
+    .mid-nested-container-section-top-left-div > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
     section{
         display: flex;
         flex-direction: row;
@@ -453,6 +518,12 @@ section{
     section > .section-one-div-right{
         order: 2;
         max-width: 600px;
+    }
+    .section-one-div-left-content{
+        margin-top: 12%;
+    }
+    .section-one-div-left-content > p {
+        width:80%
     }
     .wrapper-center{
         width: 80%;
@@ -470,10 +541,26 @@ section{
     .mid-nested-container-section-bottom > div{
         flex: 1;
     }
+    //mid-desktop
+
+    //footer-desktop
     footer{
         grid-template-columns: 1fr 1fr 1fr;
     }
     .footer-flex{
         margin-left: 2em;
+    }
+    //foter-desktop
+}
+
+@media (min-width: 1400px){
+    .mid-nested-container-section-top-left-div > div{
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width: 1600px){
+    .mid-nested-container-section-top-left-div > div{
+        margin-bottom: 15%;
     }
 }
