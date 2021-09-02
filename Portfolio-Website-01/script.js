@@ -3,9 +3,10 @@ const hamburger = document.querySelector(".hamburger")
 const navItemsMid = document.querySelector(".nav-items-mid");
 const navItemsRight = document.querySelector(".nav-items-right");
 const navItemLeft = document.querySelector(".nav-item-left");
+const topImg = document.querySelector(".section-one-div-right > img");
+const phoneImg = document.querySelector(".mid-nested-container-wrapper-img > img");
 
 nav.appendChild(hamburger)
-
 
 
 hamburger.addEventListener("click", () => {
@@ -14,5 +15,30 @@ hamburger.addEventListener("click", () => {
     navItemLeft.classList.toggle("spense-margin")
     nav.classList.toggle("nav-small-screan");
 })
+
+
+//change top img
+
+let changeImg = () => {
+    if($( window ).width() <= 599){
+        topImg.src = "Assets/Hero Image (Mobile).png"
+        phoneImg.src ="Assets/Phone Mockup (Mobile).png"
+    }
+        else if($( window ).width() >= 600 && $( window ).width() <= 1200){
+            topImg.src = "Assets/Hero Image (Tablet).png"
+            phoneImg.src ="Assets/Phone Mockup (Tablet).png"
+        }
+        else if ($( window ).width() >= 1200){
+            topImg.src = "Assets/Hero Image (Desktop).png"
+            phoneImg.src ="Assets/Phone Mockup (Desktop).png"
+        }
+}
+
+
+window.addEventListener('DOMContentLoaded', changeImg);
+
+window.addEventListener('resize', changeImg)
+
+//change top img
 
 
