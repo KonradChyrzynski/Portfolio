@@ -20,18 +20,18 @@ hamburger.addEventListener("click", () => {
 //change top img
 
 let changeImg = () => {
-    if($( window ).width() <= 587){
+    if($(".media").css("float") == "none"){
         topImg.src = "Assets/Hero Image (Mobile).png"
         phoneImg.src ="Assets/Phone Mockup (Mobile).png"
         phoneImg.className = ""
     }
-        else if($( window ).width() >= 600 && $( window ).width() <= 1187){
+        else if($(".media").css("float") == "left"){
             topImg.src = "Assets/Hero Image (Tablet).png"
             phoneImg.src ="Assets/Phone Mockup (Tablet).png"
 
             phoneImg.className = ""
         }
-        else if ($( window ).width() >= 1188){
+        else if ($(".media").css("float") == "right"){
             topImg.src = "Assets/Hero Image (Desktop).png"
             phoneImg.src ="Assets/Phone Mockup (Desktop).png"
             phoneImg.className = "object_fit"

@@ -1,3 +1,7 @@
+.media {
+  float: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -435,6 +439,9 @@ section {
 }
 
 @media (min-width: 600px) {
+  .media {
+    float: left;
+  }
   p {
     line-height: 1.6;
   }
@@ -543,6 +550,9 @@ section {
 }
 
 @media (min-width: 1200px) {
+  .media {
+    float: right;
+  }
   .mid-media-top {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;

@@ -1,7 +1,9 @@
 $gray: #f0eeeb;
 
 $pGray: #5a5444;
-
+.media{
+    float:none;
+}
 *{
     margin: 0;
     padding: 0;
@@ -352,6 +354,9 @@ section{
 
 //footer
 @media(min-width: 600px){
+    .media{
+        float: left;
+    }
     p{
         line-height: 1.6;
     }
@@ -455,8 +460,10 @@ section{
         width: 50%;
     }
 }
-@media screen (min-width: 1200px){
-
+@media (min-width: 1200px){
+    .media{
+        float: right;
+    }
     //mid-desktop
     .mid-media-top{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
