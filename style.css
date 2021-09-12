@@ -188,7 +188,7 @@ ul {
 }
 
 .nav-small-screan {
-  height: 50vh;
+  height: 350px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
