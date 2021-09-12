@@ -7,9 +7,11 @@ const topImg = document.querySelector(".section-one-div-right > img");
 const phoneImg = document.querySelector(".mid-nested-container-wrapper-img > img");
 
 nav.appendChild(hamburger)
-
+let hamburgerClicked = false;
+console.log(hamburgerClicked)
 
 hamburger.addEventListener("click", () => {
+    hamburgerClicked = true;
     navItemsMid.classList.toggle("nav-open");
     navItemsRight.classList.toggle("nav-open")
     navItemLeft.classList.toggle("spense-margin")
@@ -30,11 +32,25 @@ let changeImg = () => {
             phoneImg.src ="Assets/Phone Mockup (Tablet).png"
 
             phoneImg.className = ""
+            if(hamburgerClicked == true){
+                hamburgerClicked = false;
+                navItemsMid.classList.toggle("nav-open");
+                navItemsRight.classList.toggle("nav-open")
+                navItemLeft.classList.toggle("spense-margin")
+                nav.classList.toggle("nav-small-screan");
+            }
         }
         else if ($(".media").css("float") == "right"){
             topImg.src = "Assets/Hero Image (Desktop).png"
             phoneImg.src ="Assets/Phone Mockup (Desktop).png"
             phoneImg.className = "object_fit"
+            if(hamburgerClicked == true){
+                hamburgerClicked = false;
+                navItemsMid.classList.toggle("nav-open");
+                navItemsRight.classList.toggle("nav-open")
+                navItemLeft.classList.toggle("spense-margin")
+                nav.classList.toggle("nav-small-screan");
+            }
         }
 }
 
