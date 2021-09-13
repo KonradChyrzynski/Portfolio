@@ -181,6 +181,28 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation-name: addopacity;
+          animation-name: addopacity;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes addopacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes addopacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .spense-margin {
@@ -188,11 +210,34 @@ ul {
 }
 
 .nav-small-screan {
-  height: 350px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation-name: opennavbar;
+          animation-name: opennavbar;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes opennavbar {
+  from {
+    height: 76px;
+  }
+  to {
+    height: 350px;
+  }
+}
+
+@keyframes opennavbar {
+  from {
+    height: 76px;
+  }
+  to {
+    height: 350px;
+  }
 }
 
 section {
@@ -463,6 +508,24 @@ section {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+  }
+  @-webkit-keyframes hidenavitems {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes hidenavitems {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .nav-items-right, .nav-items-mid > ul {
     -webkit-box-orient: horizontal;

@@ -137,14 +137,33 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation-name: addopacity;
+    animation-duration: 3s;
+}
+
+@keyframes addopacity{
+    0%{opacity: 0}
+    100%{opacity: 1}
 }
 .spense-margin{
     margin: 0 auto;
 }
 
 .nav-small-screan{
-    height: 350px;
+    // height: 350px;
     flex-direction: column;
+    animation-name: opennavbar;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opennavbar{
+    from{
+        height: 76px;
+    }
+    to{
+        height: 350px;
+    }
 }
 
 //nav
@@ -375,6 +394,11 @@ section{
     }
     nav > div {
         flex: 1;
+        animation-duration: 2s;
+    }
+    @keyframes hidenavitems{
+        from{opacity:0;}
+        to{opacity: 1}
     }
 
     .nav-items-right,.nav-items-mid > ul{
