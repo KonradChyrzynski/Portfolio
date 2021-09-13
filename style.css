@@ -198,8 +198,8 @@ ul {
           flex-direction: column;
   -webkit-animation-name: opennavbar;
           animation-name: opennavbar;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
