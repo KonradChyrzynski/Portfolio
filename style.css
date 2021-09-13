@@ -187,24 +187,6 @@ ul {
           animation-duration: 3s;
 }
 
-@-webkit-keyframes addopacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes addopacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .spense-margin {
   margin: 0 auto;
 }

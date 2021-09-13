@@ -11,11 +11,38 @@ let hamburgerClicked = false;
 console.log(hamburgerClicked)
 
 hamburger.addEventListener("click", () => {
-    hamburgerClicked = true;
-    navItemsMid.classList.toggle("nav-open");
-    navItemsRight.classList.toggle("nav-open")
-    navItemLeft.classList.toggle("spense-margin")
-    nav.classList.toggle("nav-small-screan");
+    switch (hamburgerClicked){
+        case true:
+            hamburgerClicked = false;
+            break;
+        case false:
+            hamburgerClicked = true;
+            break;
+    }
+    console.log(hamburgerClicked)
+    if(hamburgerClicked == true){
+        nav.classList.add("nav-small-screan");
+        navItemLeft.classList.add("spense-margin")
+        setTimeout(function(){
+            navItemsMid.classList.add("nav-open");
+            navItemsRight.classList.add("nav-open")
+        },2500)
+    }else{
+        nav.classList.remove("nav-small-screan");
+        navItemLeft.classList.remove("spense-margin")
+        navItemsMid.classList.remove("nav-open");
+        navItemsRight.classList.remove("nav-open")
+    }
+    // const animated = document.querySelector('.nav-small-screan');
+    // if(animated !== null){
+    //     animated.addEventListener('animationend', () => {
+    //       });
+    // } else{
+    //     navItemsMid.classList.remove("nav-open");
+    //     navItemsRight.classList.remove("nav-open")
+    //     navItemLeft.classList.remove("spense-margin")
+    // }
+    // console.log(animated)
 })
 
 
