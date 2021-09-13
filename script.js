@@ -8,30 +8,36 @@ const phoneImg = document.querySelector(".mid-nested-container-wrapper-img > img
 
 nav.appendChild(hamburger)
 let hamburgerClicked = false;
-console.log(hamburgerClicked)
 
 hamburger.addEventListener("click", () => {
     switch (hamburgerClicked){
         case true:
+            clearTimeout(hamburgerTimeout)
             hamburgerClicked = false;
             break;
         case false:
+            clearTimeout(hamburgerTimeout)
             hamburgerClicked = true;
             break;
     }
-    console.log(hamburgerClicked)
     if(hamburgerClicked == true){
         nav.classList.add("nav-small-screan");
         navItemLeft.classList.add("spense-margin")
-        setTimeout(function(){
+        var hamburgerTimeout = setTimeout(function(){
             navItemsMid.classList.add("nav-open");
             navItemsRight.classList.add("nav-open")
+            if(hamburgerClicked !== true){
+                nav.classList.remove("nav-small-screan");
+                navItemLeft.classList.remove("spense-margin")
+                navItemsMid.classList.remove("nav-open");
+                navItemsRight.classList.remove("nav-open");
+            }
         },2500)
     }else{
         nav.classList.remove("nav-small-screan");
         navItemLeft.classList.remove("spense-margin")
         navItemsMid.classList.remove("nav-open");
-        navItemsRight.classList.remove("nav-open")
+        navItemsRight.classList.remove("nav-open");
     }
     // const animated = document.querySelector('.nav-small-screan');
     // if(animated !== null){
