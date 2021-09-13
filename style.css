@@ -183,8 +183,8 @@ ul {
           align-items: center;
   -webkit-animation-name: addopacity;
           animation-name: addopacity;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .spense-margin {
